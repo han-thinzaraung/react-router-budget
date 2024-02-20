@@ -112,11 +112,11 @@ const Dashboard = () => {
                       expenses && expenses.length > 0 && (
                         <div className="grid-md">
                           <h2>Recent Expenses</h2>
-                          <Table expenses={expenses.sort((a, b) => b.createdAt - a.createdAt).slice(0,8)} />
+                          <Table expenses={expenses.sort((a, b) => b.createdAt - a.createdAt).slice(0,3)} />
                         </div>
                       )
                     }
-                    {expenses.length > 8 && (
+                    {expenses?.length > 3 && (
                       <Link to="expenses" className="btn btn--dark">
                         View all expenses
                       </Link>
